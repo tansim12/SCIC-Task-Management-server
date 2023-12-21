@@ -3,7 +3,7 @@ const normalMiddleWare = require('./middleware/Normal Middle Ware/normalMiddleWa
 const globalErrorHandler = require('./utils/GlobalErrorHandler/globalErrorHandler');
 require("dotenv").config()
 const app = express()
-const todoRoute = require("./route/To do/index")
+const todoRoute = require("../src/route/To do/index")
 
 
 // normalMiddleWare 
@@ -15,7 +15,7 @@ app.use(todoRoute)
 
 
 app.get("/health", (req, res) => {
-    res.send("Next explore running ");
+    res.send("Task management ");
   });
 
 app.all("*", (req, res, next) => {
