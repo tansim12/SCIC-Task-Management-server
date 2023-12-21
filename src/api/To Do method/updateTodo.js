@@ -6,7 +6,7 @@ const updateTodo = async (req, res) => {
   const info = req.body;
   const result = await Todo.updateOne({ _id: id }, { ...info });
   if (result?.acknowledged) {
-    res.send({acknowledged});
+    res.send(result?.acknowledged);
   }
 };
 module.exports = updateTodo;
