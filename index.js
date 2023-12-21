@@ -10,7 +10,7 @@ const main = async () => {
 	try {
         await dbConnect();
 		server.listen(port, async () => {
-            console.log(`Next.js Explore ${port}`);
+            console.log(`SCIC Task management ${port}`);
 		});
 	} catch (e) {
 		console.log('Database Error');

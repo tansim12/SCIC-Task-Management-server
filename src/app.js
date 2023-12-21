@@ -3,14 +3,14 @@ const normalMiddleWare = require('./middleware/Normal Middle Ware/normalMiddleWa
 const globalErrorHandler = require('./utils/GlobalErrorHandler/globalErrorHandler');
 require("dotenv").config()
 const app = express()
-const userRoute = require("../src/route/User Route/index")
+const todoRoute = require("./route/To do/index")
 
 
 // normalMiddleWare 
 normalMiddleWare(app)
 
-// user route 
-app.use(userRoute)
+// todoRoute 
+app.use(todoRoute)
 
 
 
