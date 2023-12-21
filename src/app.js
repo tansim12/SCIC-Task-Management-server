@@ -4,6 +4,7 @@ const globalErrorHandler = require('./utils/GlobalErrorHandler/globalErrorHandle
 require("dotenv").config()
 const app = express()
 const todoRoute = require("../src/route/To do/index")
+const userRoute = require("../src/route/Users/index")
 
 
 // normalMiddleWare 
@@ -12,6 +13,9 @@ normalMiddleWare(app)
 // todoRoute 
 app.use(todoRoute)
 
+
+// user router 
+app.use(userRoute)
 
 
 app.get("/health", (req, res) => {
