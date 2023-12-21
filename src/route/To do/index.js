@@ -4,11 +4,14 @@ const getAllTodo = require('../../api/To Do method/getAllTodo');
 const updateTodo = require('../../api/To Do method/updateTodo');
 const getOneTodo = require('../../api/To Do method/getOneTodo');
 const deleteOneTodo = require('../../api/To Do method/deleteOneTodo');
+const patchTodoComplete = require('../../api/To Do method/patchTodoComplete');
+
 const router = express.Router()
 
 router.post('/todo', postTodos )
 router.get('/todo', getAllTodo )
 router.get('/todo/:_id', getOneTodo )
 router.delete('/todo/:_id', deleteOneTodo )
+router.patch('/todo/:_id', patchTodoComplete )
 router.put('/todo/:_id', updateTodo )
 module.exports=router
